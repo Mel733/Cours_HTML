@@ -2,18 +2,77 @@
     width: 550px;
     height: 650px;
     background: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    position: relative; /*reste en place et dévient la réference de placement des div enfants*/
 }
+
+
+
+
 
 #cercle{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 2px solid black;
-    position: absolute;
-    left: 40%;
-    top: 15px;
+    border-bottom: 4px solid black; /*met une bordure seulement sur le bas*/
+    position: absolute; /*se place par rapport a son parent*/
+    left: 40%; /*se déplace de 40% vers la gauche*/
+    z-index: 3; /*se met en premier plan*/
+    background: whitesmoke;
+    top: 100px; /*déplace le cercle de 100px depuis le haut*/
 }
 
+#bas-carte{
+    position: absolute; /*se place par rapport a son parents*/
+    width: inherit; /*hérite de la largeur du parent*/
+    height: 500px;
+    background: linear-gradient(to bottom, rgb(255, 185, 56), rgb(219, 28, 28), rgb(178, 39, 39)); /*permet de faire un dégradé de couleur qui commence de haut en bas(orange en haut et rouge en bas) */
+    border-top: 3px solid black;
+    bottom: 0; /*se met tout en bas*/
+    z-index: 1; /*se met en arrière plan*/
+    display: flex; /*met les div enfant en colonne*/
+    flex-direction: column;
+}
+
+img{
+    border-radius: 50%; /*arrondi l'image pour faire un cercle*/
+}
+
+h1{
+   position: absolute; /*se place par rapport a son parents*/
+   right: 30%;
+   top: 50px;
+   font-size: 40px;
+}
+
+
+
+h2{
+    position: absolute; /*se place par rapport a son parents*/
+    right: 22%;
+    top: 150px;
+    font-weight: 300; /*épaisseur de la police, plus c'est grand plus c'est épais*/
+}
+
+input{
+    background: black;
+    color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 5% ;
+    position: absolute; /*se place par rapport a son parents*/
+    right: 40%;
+    top: 400px;
+}
+
+
+.logo{
+    position: absolute; /*se place par rapport a son parents*/
+    right: 35%;
+    top: 250px;
+    font-size: 40px; /*modifier la taille des logos*/
+    display: flex; /*met les div enfant les un a coté des autres*/
+    gap:50px /*espace entre les logos*/
+
+
+    
+}

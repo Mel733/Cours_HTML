@@ -1,0 +1,33 @@
+body{
+    height: 200px;
+}
+
+
+
+header{
+    background: greenyellow;
+    height: 50px;
+}
+
+main{
+    margin-block: 20px; 
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(1,150px); /* va créer quatre colonnes dans la grille. Elles se partagent équitablement la largeur avec la fraction (fr) */
+    gap: 10px;
+}
+
+
+.case1{
+background: #A5B830;
+}
+
+.case2{
+    background-color: #DAF527;
+}
+
+footer{
+    background: green;
+    font-size: 10px;
+    height: 25px;
+}

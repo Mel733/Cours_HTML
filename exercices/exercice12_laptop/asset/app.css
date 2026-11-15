@@ -51,7 +51,9 @@
 } */
 
 video{
-    position: absolute; /*l'élément se place par rapport a son parents donc l'écran*/
-    left:25px; /*déplace de 25px depuis la gauche du parent*/
-    top:25px; /*déplace de 25px depuis le haut du parent*/
+    position: absolute;
+    left: 5%;
+    bottom:0;
+    width: 90%;
+    height: 90%;
 }

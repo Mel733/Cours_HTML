@@ -28,13 +28,13 @@
          <h2>Formulaire</h2>
            <form>
              <fieldset>
-                <legend>Rmeplissez le formulaire</legend>
+                <legend>Rmeplissez le formulaire</legend> <!--titre d'un groupe qui est un fieldset-->
              
                 <label for="prenom">Votre prénom</label> <!--doit renseigner un for pour l'id en dessous-->
                 <input type="texte" placeholder="Indiquez votre prénom" id="prenom"> <!--Quand j'appuie sur le label, le curseur (focus) va sur le champs-->
                 
                 <label for="nom">Votre nom</label>
-                <input type="texte" placeholder="Indiquez votre nom" id="nom" maxlength="20" minlength="2" maxlength="30" minlength="1">
+                <input type="texte" placeholder="Indiquez votre nom" id="nom" maxlength="30" minlength="1">
 
                 <label for="age">Votre age</label>
                 <input type="number" placeholder="Indiquez votre age" id="age" min="10" max="120" value="21" >
@@ -51,8 +51,8 @@
 
                 <p>Indiquer votre civilité<p>
                 <div>
-                 <input type="radio" id="mme" checked name="civilite"><label for="mme">Madame</label>
-                 <input type="radio" id="mr" checked name="civilite"><label for="mr">Monsieur</label>
+                 <input type="radio" id="mme" checked name="civilite"><label for="mme">Madame</label> <!--Mme est automatiquement coché et se reintialise à chaque fois que la page recharge-->
+                 <input type="radio" id="mr" name="civilite"><label for="mr">Monsieur</label>
                 </div>
                 
                 

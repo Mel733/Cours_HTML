@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Le parent : position relative = les enfants se placent par rapport à lui */
+#renard {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+/* Tous les enfants du renard sont placés avec position absolute (left / top) */
+#renard div {
+  position: absolute;
+  width: 0;    /* un triangle n'a pas de largeur... */
+  height: 0;   /* ...ni de hauteur : tout vient des bordures */
+}
+
+/* ===== TÊTE : triangle qui pointe vers le bas ===== */
+/* Astuce : 2 bordures transparentes sur les côtés + 1 bordure colorée = un triangle */
+.tete-noir {
+  left: 80px;
+  top: 60px;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 90px solid black;
+}
+/* Même triangle en blanc, un peu plus petit, posé dessus : ça fait un contour */
+.tete-blanc {
+  left: 85px;
+  top: 63px;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-top: 83px solid white;
+}
+
+/* ===== OREILLES : triangles noirs qui pointent vers le haut ===== */
+.oreille {
+  top: 30px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 35px solid black;
+}
+.oreille-gauche { left: 78px; }
+.oreille-droite { left: 172px; }
+
+/* ===== YEUX : juste une bordure du bas, arrondie ===== */
+.oeil {
+  top: 85px;
+  width: 14px;
+  height: 6px;
+  border-bottom: 2px solid black;
+  border-radius: 0 0 14px 14px; /* arrondit les coins du bas */
+}
+.oeil-gauche { left: 108px; }
+.oeil-droit  { left: 158px; }
+
+/* ===== NEZ : petit triangle noir vers le bas ===== */
+.nez {
+  left: 133px;
+  top: 125px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 8px solid black;
+}
+
+/* ===== CORPS : triangle qui pointe vers le haut ===== */
+.corps-noir {
+  left: 95px;
+  top: 130px;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 110px solid black;
+}
+.corps-blanc {
+  left: 99px;
+  top: 133px;
+  border-left: 41px solid transparent;
+  border-right: 41px solid transparent;
+  border-bottom: 104px solid white;
+}
+
+/* ===== PATTE : petit triangle noir ===== */
+.patte {
+  left: 126px;
+  top: 238px;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 8px solid black;
+}
+
+/* ===== QUEUE : triangle qui pointe vers la droite ===== */
+.queue-noir {
+  left: 170px;
+  top: 190px;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 70px solid black;
+}
+.queue-blanc {
+  left: 170px;
+  top: 193px;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-left: 62px solid white;
+}
+/* Le bout noir de la queue */
+.bout-queue {
+  left: 218px;
+  top: 207px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 22px solid black;
+}
+
+/* ===== PETITS TRIANGLES QUI FLOTTENT ===== */
+.petit {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid black;
+}
+.p1 { left: 220px; top: 95px; }
+.p2 { left: 240px; top: 110px; }
+.p3 { left: 20px;  top: 225px; }
+.p4 { left: 40px;  top: 210px; }
+.p5 { left: 35px;  top: 260px; }
