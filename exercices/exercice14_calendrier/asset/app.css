@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(11,1fr);
     grid-template-rows: repeat(3, fr);
+     gap: 10px;
 }
 
 .item{
@@ -12,6 +13,20 @@
     background: darkblue;
     border-radius: 30% 30% 0 0;
     position: relative;
+    cursor: pointer;
+}
+
+
+.item:hover{
+    background: rgb(110, 110, 252);
+}
+
+
+
+
+.item:active{
+   box-shadow: 2px 2px 5px #fc894d;
+   
 }
 
 .mois{
@@ -30,3 +45,4 @@ border-radius: 30% 0 30% 0;
 top:0;
 text-align: center;
 }
+

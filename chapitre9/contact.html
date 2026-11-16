@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/app.css">
+    <title>Contact | StudioMélodie</title>
+</head>
+<body>
+    <a class="access-content" href="#contenu">Accéder au contenue</a>
+    <header class="en-tête">
+        <div class="container barre-nav">
+            <a href="index.html" class="logo">Studio<span>Mélodie</span></a>
+            <nav aria-label="Navigation principale">
+                <ul class="navigation">
+                    <li><a href="index.html" >Accueil</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#methode" >Méthodes</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenu" class="section">
+        <div class="conteneur contact-grille">
+            <div class="contact-intro">
+                <p class="surtitre">Faisons connaissance</p>
+                <h1>Parlons de votre projet</h1>
+                <p class="introduction">Un site a crée ? Décrivez nous vos besoins</p>
+                <div class="info-contact">
+                    <h2>Préparez votre message</h2>
+                    <p>Indiquez votre objectif..</p>
+                </div>
+
+            </div>
+              <section class=" carte formulaire-carte" aria-labelledby="titre-formulaire">
+                <h2 id="titre-formulaire">Votre message</h2>
+                <p>Les champs indiqué avec un * sont obligatoire</p>
+                <form method="post" action="">
+                    <div class="grille-champs">
+                        <div class="champ">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" required autocomplete="nom">
+                        </div>
+                        <div class="champ">
+                            <label for="email">Email *</label>
+                            <input typr="email" id="email" name="email" required autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="champ">
+                        <label for="sujet">Sujet*</label>
+                        <select id="sujet" name="sujet" required>
+                            <option value="" disabled selected>Choisissez un suje</option>
+                            <option value="creation-site">Création site</option>
+                            <option value="idee">Idée a clarifier</option>
+                        </select>
+                    </div>
+                    <div class="champ">
+                        <label for="message">Votre message</label>
+                        <textarea id="message" name="message" required rows="6"></textarea>
+                    </div>
+                    <button class="bouton bouton-principal" type="submit">Envoyer</button>
+                </form>
+              </section>
+
+        </div>
+        
+
+    </main>
+
+    <footer class="pied-page">
+        <div class="conteneur pied-flex">
+            <p>&copy; 2026 StudioMélodie</p>
+            <nav aria-label="Navigation secondaire">
+                <a href="index.html">Accueil</a>
+                <a href ="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

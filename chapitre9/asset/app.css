@@ -1,0 +1,341 @@
+:root{
+   --fond: #f6f8fc;
+      --surface: #fff;
+      --texte: #17233d;
+      --texte-secondaire: #45546d;
+      --primaire: #4F46e5;
+      --primaire-fonce: #3730a3;
+      --bordure: #d9e1ee;
+      --teinte: #eaf0ff;
+      --rayon: 1rem;
+}
+
+
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;/*16px*/
+}
+
+
+body{
+    margin: 0;
+    color: var(--texte);
+    background: var(--fond);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    
+}
+
+h1,h2,h3, p{
+    margin-top: 0;
+
+}
+
+
+h1,h2,h3{
+    line-height: 1.2;
+}
+
+
+h1{
+    font-size: clamp(2.2rem,1.6rem + 3vw, 3,88rem);
+     /* clamp() : permet de définir une taille de police réactive */
+    /*2.2rem: minimal;
+    1.6rem + 3vw : taille intermédiaire e, fonction de la largeur de l'écran
+    3.8:maximal*/
+}
+
+
+h2{
+    font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2rem);
+}
+
+a{
+    color: var(--primaire-fonce);
+}
+
+.conteneur{
+    margin-inline: auto;
+    width: min(100% - 2rem, 72rem);
+    /*min(): permet de définir une largeur réactive
+    100% - 2rem : largeur minimale avec un espace de 2rem
+    72rem : largeur maximal*/
+}
+
+.section{
+    padding-block: 3.5rem;
+}
+
+
+.surtitre{
+    color: var(--primaire-fonce);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+
+
+.introduction, .texte-intro{
+    color:var(--texte-secondaire);
+    max-width: 60%;
+
+}
+
+.introduction{
+    font-size: 1.1rem;
+}
+
+.access-content{
+    position:absolute;
+    top:.5rem;
+    left:.5rem;
+    padding: .75rem;
+    background: white;
+    transform: translateY(-200%);/*a l'exterieur de la page*/
+    z-index: 10;
+}
+
+
+.access-content:focus{
+    transform: translateY(0);/*a l'intérieur de la page*/
+}
+
+.en-tete{
+    background: var(--surface);
+    border-bottom:1px solid var(--bordure);
+}
+
+.barre-navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+    padding-block: 1rem;
+}
+
+.logo{
+    color: var(--texte);
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+.logo span {
+    color: var(--primaire-fonce);
+
+}
+
+.navigation{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.navigation a {
+    display: inline-block;
+    padding-block: .35rem;
+    color: var(--texte);
+    font-weight: 700;
+    text-decoration: none;
+}
+.navigation a:hover, .navigation a[aria-current="page"]{
+    text-decoration: underline;
+    color: var(--primaire-fonce);
+    text-underline-offset: .3rem;
+     /* décalage du soulignement */
+}
+
+
+.hero{
+   background: linear-gradient(135deg, #eef2ff, #e7f8f5)
+}
+
+
+
+.hero-grille,.methode-grille,.contact-grille,.grille-cartes,.grille-champs{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.hero-grille, .methode-grille{
+    align-items: center;
+}
+
+.encart-hero,.carte,.info-contact{
+    min-width: 0;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+    box-shadow: 0 12px 30px rgb(23 35 61 / 7%);
+
+}
+
+
+
+.encart-hero h2{
+    font-size: 1.5rem;
+}
+
+.etiquette,.numero{
+    display: inline-block;
+    color: var(--primaire-fonce);
+    font-weight: 700;
+}
+
+.Liste-simple, .etapes {
+    padding-left: 1.25rem;
+}
+
+
+.Liste-simple li, .etapes li {
+    margin-bottom: .75rem;
+
+}
+
+
+.actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.5rem;
+}
+
+
+.bouton{
+    min-height: 2.75rem;
+    padding: .75rem 1.1rem;
+    border: 2px solid transparent;
+    border-radius: .65rem;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.bouton-principal{
+    color: #fff;
+    background: var(--primaire-fonce);
+}
+
+
+.bouton-principal:hover{
+     background: #252076;
+}
+
+.bouton-secondaire{
+  color: var(--primaire-fonce);
+   background: transparent;
+   border-color: var(--primaire-fonce);
+}
+
+.bouton-clair{
+    color: var(--primaire-fonce);
+    background: #fff;
+}
+
+
+.grille-cartes{
+    margin-top: 2rem;
+}
+
+.carte h3{
+    margin-top: .75rem;
+}
+
+.carte p:last-child{
+    margin-bottom: 0;
+}
+
+
+.appel-action{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 2rem;
+    color: white;
+    background:#312e81;
+    border-radius: var(--rayon);
+}
+
+
+.appel-action p{
+    margin-bottom: 0;
+
+}
+
+.contact-grille{
+    align-items: start;
+}
+
+.info-contact{
+   margin-top: 2rem;
+}
+
+
+.info-contact h2{
+    font-size: 1.25rem;
+}
+
+.formulaire-carte form{
+     display: grid;
+     gap: .35rem;
+     min-width: 0;
+
+}
+
+
+label{
+    font-weight: 700;
+}
+
+input, select, textarea{
+    width: 100%;
+    min-width: 0;
+    padding: .75rem;
+    border: 1px solid var(--bordure);
+    border-radius: .5rem;
+    color: var(--texte);
+    background: white;
+    font: inherit;
+}
+
+
+
+textarea{
+    resize: vertical ;
+}
+
+.note-formulaire{
+    color: var(--texte-secondaire);
+    font-size: .9rem;
+}
+
+.pied-page{
+    padding-block: 1.5rem;
+    color: white;
+    background:#17233d
+}
+.pied-flex nav a {
+    color: white;
+}
+.pied-flex,.pied-flex nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem 1.5rem;
+}

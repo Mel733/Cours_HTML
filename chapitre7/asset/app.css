@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Inclut le padding et la bordure dans la taille de l'élément*/
+
+}
+
+
+body{
+    font-family: Arial, sans-serif; /*chnage la police*/
+    line-height: 1.6;
+    /*Hauteur de la ligne pour améliorer la visibilité*/
+    font-size: 16px;
+}
+
+
+header, nav, main, footer{
+    padding: 20px;
+    /*Ajoute une marge interne pour tout les éléments principaux*/
+
+}
+
+h1{
+    font-size: 2em;
+}
+
+
+h2{
+    font-size: 1.6em;
+}
+header{
+    background-color: rgb(52, 52, 224);
+    color: #ffffff;
+    text-align: center; /*centre l'en-tête*/
+}
+
+nav{
+    background-color: cyan;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap; /*permet au élément de passer l'un sous les autres si nécessaire*/
+}
+
+
+nav ul li {
+    margin-inline: 15px;
+    /*Ajoute un espacement horizontale entre les éléments de la liste*/
+}
+
+nav ul li a {
+    text-decoration: none;
+    /*supprime les soulignement des liens*/
+    color: rgb(0, 109, 204);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /*Utilise flexbox pour la mise en page principale et ajoute un espace entre les éléments*/
+}
+
+
+section{
+   flex: 3;
+    /* Définit la section principale pour occuper 3 parts de l'espace disponible */
+    min-width: 0;
+    /* Empêche la section de rétrécir en dessous de sa largeur minimale */
+    overflow-wrap: anywhere;
+    /* Permet au texte de passer à la ligne si nécessaire */
+    padding: 20px;
+    background-color: rgb(170, 231, 211);
+}
+
+
+aside{
+    flex: 1;
+    /* Définit la barre latérale pour occuper 1 part de l'espace disponible */
+    min-width: 0;
+    /* Empêche la barre latérale de rétrécir en dessous de sa largeur minimale */
+    overflow-wrap: anywhere;
+    /* Permet au texte de passer à la ligne si nécessaire */
+    padding: 20px;
+    background: floralwhite;
+}
+
+
+footer{
+    background: black;
+    color:white;
+    text-align:center;
+}
+
+/* Media query pour les fenêtres de 768px ou moins*/
+@media (max-width:768px){
+    body{
+        font-size: 12px;
+    }
+
+    nav ul {
+     flex-direction: column;/*navigation en verticale (colonne)*/
+    }
+
+    nav ul li {
+        margin-inline: 0;
+        margin-block: 10px;
+    }
+
+    main{
+        flex-direction: column;  /* empile les sections verticalement */
+    }
+}

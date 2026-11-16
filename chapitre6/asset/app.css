@@ -1,0 +1,173 @@
+/* le responsive web design : Ethan Marcotte 
+Principe : adapter le design d'un site web à différentes tailles d'écran et appareils. */
+
+@media (min-width: 768px) {
+    /* Styles pour les écrans de taille moyenne et plus */
+}
+
+@media all and (min-width: 768px) {}
+
+/* impression */
+@media print {
+    /* Styles pour l'impression. Donc ici utilisation des unités absolues comme px, cm, mm*/
+}
+
+/*mode portrait */
+@media (orientation: portrait) {
+    /* Styles pour l'impression en mode portrait */
+}
+
+/*mode paysage */
+@media (orientation: landscape) {
+    /* Styles pour l'impression en mode paysage */
+}
+
+/* uniquement les écrans */
+@media screen {
+    /* Styles pour les écrans uniquement */
+}
+
+@media only screen {
+    /* Styles pour les écrans uniquement */
+}
+
+/* uniquement les smartphones
+la largeur maximale est de 320px pour les smartphones
+*/
+@media (max-width:320px) {
+    /* Styles pour les smartphones */
+}
+
+/* uniquement les tablettes 
+la largeur minimale est de 321px et la largeur maximale est de 768px pour les tablettes
+*/
+@media (min-width: 321px) and (max-width: 768px) {
+    /* Styles pour les tablettes */
+}
+
+/* uniquement les ordinateurs de bureau 
+la largeur minimale est de 769px pour les ordinateurs de bureau
+*/
+@media (min-width: 769px) {
+    /* Styles pour les ordinateurs de bureau */
+}
+
+/* nouveautés : */
+@media (prefers-color-scheme: dark) {
+    /* Styles pour les utilisateurs ayant activé le mode sombre */
+}
+
+@media (prefers-color-scheme: light) {
+    /* Styles pour les utilisateurs ayant activé le mode clair */
+}
+
+/*ceci...*/
+@media screen and (max-width:300px) {}
+
+/*..devient*/
+@media(width <=300px) {}
+
+/*ceci...*/
+@media screen and (min-width:301px) and (max-width:500px) {
+    /* Styles pour les écrans entre 301px et 500px */
+}
+
+/*..devient*/
+@media(300px < width <=500px) {}
+
+.container-flex{
+    background: cyan;
+    display: flex;
+    flex-wrap: wrap; /*met les élément l'un sous l'autre*/
+    gap: 10px;
+   
+}
+
+.column-flex{
+    background: green;
+    height: 50px;
+    width: 450px;
+    border: 2px solid black;
+   
+}
+
+
+.img-container{
+    background: plum;
+}
+
+
+
+.img-container img{
+    max-width: 100%;
+    height: auto;
+}
+
+.contenue{
+    display: grid;
+    gap: 1rem;
+    overflow-wrap: anywhere; /*permet de forcer le retour à la ligne pour les mots trop longs*/
+    background: orange;
+}
+
+section{
+    background: yellow;
+    padding: 1rem;
+    height: 100vh;
+    min-height: 100vh;
+    /*Assure que la section  ocuppe au moins toute la hauteur de la fentre*/
+}
+
+aside{
+    background: red;
+    padding:1rem;
+}
+
+/* a aprtir de 768px inclu: deux colonnes*/
+@media (min-width:768px){
+    .contenue{
+        grid-template-columns: 2fr 1fr;
+        font-size: .8rem;
+    }
+}
+
+/*rem prend la taille de front de html, changez depuis html chnagera tout au lieux de changez un par un*/
+/*em fait le meme chose mais prend depuis le bodu*/
+
+
+.grid{
+    background: pink;
+    gap:10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    /*Ajuste automatiquement le nombre de colonnes en fonction de la largeur disponible*/
+}
+
+.grid .item{
+    background: coral;
+    overflow-wrap: anywhere;
+    padding: 1rem;
+    min-width: 0;
+}
+
+.nav-list{
+    background: fuchsia;
+    flex-direction: column;
+    display: flex;
+    gap:1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none; /*enlève les puces de la liste*/
+}
+
+.nav-list li {
+    background: palevioletred;
+    padding: 0.5rem;
+}
+
+@media (min-width:768px){
+    .nav-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

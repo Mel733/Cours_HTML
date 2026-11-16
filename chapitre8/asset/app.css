@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.6;
+}
+
+header, nav,main, footer{
+    padding: 20px;
+}
+
+
+header{
+    background-color:rgb(92, 124, 153);
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px black;
+    position: sticky;
+     /* Reste en haut lors du défilement */
+    top: 0;
+}
+
+nav{
+    background-color: rgb(57, 123, 189);
+}
+
+nav ul {
+    list-style: none;
+
+}
+
+nav ul li {
+    margin: 10px 0;
+    /*Equivalent margin top et bottom*/
+
+}
+
+nav ul li a {
+    color : navy;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+main{
+    display: grid;
+    grid-template-areas: "contenu"
+    "sidebar";
+}
+
+section{
+    grid-area: contenu;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    padding: 20px;
+    background-color: azure;
+}
+
+
+aside{
+    grid-area: sidebar;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    padding: 20px;
+    background-color: rgb(123, 226, 226);
+}
+
+
+footer{
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Media query pour les écrans de 768px ou plus */
+@media(min-width:768px){
+    nav ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    main{
+        grid-template-columns: minmax(0,3fr) minmax(0,1fr);/*donne une taile minimum et max pour les deux colonnes*/
+        grid-template-areas: "contenu sidebar";
+    }
+}
