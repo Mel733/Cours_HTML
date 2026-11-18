@@ -10,7 +10,7 @@
 
 .cercle {
             border-radius: 50%;
-            padding: 35px;
+            padding: 25px; /*marge extèrieur entre les cercles*/
             border: 1px solid black;
 }
 
