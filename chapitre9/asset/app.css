@@ -226,7 +226,7 @@ a{
     display: inline-flex;
 }
 
-.bouton-principal{
+.bouton-principale{
     color: #fff;
     background: var(--primaire-fonce);
 }
@@ -237,7 +237,7 @@ a{
 }
 
 .bouton-secondaire{
-  color: var(--primaire-fonce);
+   color: var(--primaire-fonce);
    background: transparent;
    border-color: var(--primaire-fonce);
 }
@@ -331,11 +331,51 @@ textarea{
     color: white;
     background:#17233d
 }
-.pied-flex nav a {
+.pied-flex  a {
     color: white;
 }
 .pied-flex,.pied-flex nav {
     display: flex;
     flex-wrap: wrap;
     gap: .75rem 1.5rem;
+}
+
+
+.pied-flex{
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.pied-flex p {
+    
+    margin: 0;
+}
+
+/*a partir de 768px*/
+@media(min-width:768px){
+    .section{
+        padding-block: 4rem;
+    }
+
+    .barre-navigation{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hero-grille, .methode-grille, .contact-grille{
+        grid-template-columns: minmax(0,1fr) minmax(0, 1fr);
+        gap:3rem
+    }
+
+    .grille-cartes,.grille-champs{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(min-width:1024px){
+    .grille-cartes{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
